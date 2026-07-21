@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Privacy Policy — NexQL</title>
+  <meta name="description" content="Privacy Policy for NexQL: what data the website, checkout, Cloud Sync, and AI backend collect and why.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nexql.astrx.dev/privacy.html">
+  <meta name="theme-color" content="#07080E">
+  <link rel="icon" type="image/png" href="assets/NexQL.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.legal-page {
+      margin: 0;
+      height: auto;
+      min-height: 100vh;
+      overflow: visible;
+      background: var(--bg, #faf9f5);
+      color: var(--fg, #1a1917);
+      font-family: var(--font-body, "Space Grotesk", system-ui, sans-serif);
+    }
+
+    .legal-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--border, #d9d5cc);
+      background: color-mix(in srgb, var(--bg, #faf9f5) 92%, transparent);
+      backdrop-filter: blur(8px);
+    }
+
+    .legal-header-inner {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .legal-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .legal-logo img { width: 32px; height: 32px; }
+
+    .legal-header-nav { display: flex; gap: 1rem; font-size: 0.85rem; }
+    .legal-header-nav a { color: var(--muted, #6b665f); text-decoration: none; }
+    .legal-header-nav a:hover, .legal-header-nav a[aria-current="page"] { color: var(--fg, #1a1917); }
+
+    .legal-main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 5rem;
+    }
+
+    .legal-updated {
+      color: var(--muted, #6b665f);
+      font-size: 0.85rem;
+      margin: 0.5rem 0 2rem;
+    }
+
+    .legal-intro {
+      color: var(--muted, #6b665f);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .legal-prose h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 2.25rem 0 0.75rem;
+      padding-top: 0.25rem;
+      border-top: 1px solid var(--border, #d9d5cc);
+    }
+
+    .legal-prose h2:first-of-type { border-top: 0; margin-top: 0; }
+
+    .legal-prose h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin: 1.1rem 0 0.5rem;
+    }
+
+    .legal-prose p, .legal-prose li {
+      line-height: 1.65;
+      font-size: 0.95rem;
+      color: var(--fg, #1a1917);
+    }
+
+    .legal-prose p { margin: 0 0 0.85rem; }
+    .legal-prose ul { margin: 0 0 0.85rem; padding-left: 1.25rem; }
+    .legal-prose li { margin-bottom: 0.4rem; }
+    .legal-prose a { color: var(--nex-indigo, #6c4cd6); }
+    .legal-prose strong { font-weight: 600; }
+
+    .legal-table-wrap { overflow-x: auto; margin: 0 0 1rem; }
+    .legal-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+    .legal-table th, .legal-table td {
+      text-align: left;
+      padding: 0.5rem 0.65rem;
+      border: 1px solid var(--border, #d9d5cc);
+      vertical-align: top;
+    }
+    .legal-table th {
+      background: var(--panel, #f0eee6);
+      font-weight: 600;
+    }
+
+    .legal-footer-note {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border, #d9d5cc);
+      font-size: 0.85rem;
+      color: var(--muted, #6b665f);
+    }
+
+    .legal-footer-note a { color: var(--nex-indigo, #6c4cd6); }
+  </style>
+</head>
+<body class="legal-page">
+  <header class="legal-header" role="banner">
+    <div class="legal-header-inner">
+      <a href="/" class="legal-logo" aria-label="NexQL home">
+        <img src="assets/NexQL.png" alt="" width="32" height="32">
+        <span class="brand-gradient" style="font-weight: 600; font-size: 1.1rem;">NexQL</span>
+      </a>
+      <nav class="legal-header-nav" aria-label="Legal pages">
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-main">
+    <span class="eyebrow">Legal</span>
+    <h1 class="grad-text" style="font-size: 1.9rem; margin: 0.5rem 0 0;">Privacy Policy</h1>
+    <p class="legal-updated">Last updated: July 19, 2026</p>
+    <p class="legal-intro">
+      NexQL is a local-first VS Code extension — most of what you do (connecting to databases,
+      running queries, viewing results) never leaves your machine. This page explains, in full, the
+      data our <strong>website and backend services</strong> (checkout, license activation, optional
+      Cloud Sync, optional hosted AI) do collect, and — just as importantly — what they don't.
+    </p>
+
+    <div class="legal-prose">
+      <h2>1. What stays on your machine</h2>
+      <p>
+        The extension core runs entirely inside your VS Code instance. Database connection
+        credentials (hosts, usernames, passwords) are encrypted and stored locally using VS Code's
+        built-in <strong>Secret Storage</strong> (OS keychain) — they are never sent to NexQL
+        servers, even if you use paid features. Query results and table data you view in NexQL never
+        pass through our backend at all; they go directly between your machine and your database.
+      </p>
+
+      <h2>2. Data we collect, and why</h2>
+      <div class="legal-table-wrap">
+        <table class="legal-table">
+          <thead>
+            <tr><th>Data</th><th>When</th><th>Why</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Email address</td>
+              <td>Checkout (via Razorpay) or GitHub OAuth sign-in for NexQL Free AI / Cloud Sync</td>
+              <td>Deliver your license key, identify your account, send billing receipts</td>
+            </tr>
+            <tr>
+              <td>License key &amp; subscription status</td>
+              <td>After a paid checkout</td>
+              <td>Activate Sponsor/Singularity features in the extension</td>
+            </tr>
+            <tr>
+              <td>GitHub user ID</td>
+              <td>Only if you sign in with GitHub for free-tier AI or Cloud Sync</td>
+              <td>Identify your session without a license key; enforce free-tier usage limits</td>
+            </tr>
+            <tr>
+              <td>Device ID / device name</td>
+              <td>Cloud Sync device authorization</td>
+              <td>Let you see and revoke which devices are linked to your account</td>
+            </tr>
+            <tr>
+              <td>Connection profiles, saved queries, notebooks (no passwords)</td>
+              <td>Only if you opt in to Cloud Sync (paid feature)</td>
+              <td>Sync your workspace across your own devices</td>
+            </tr>
+            <tr>
+              <td>Monthly AI token counts</td>
+              <td>Any AI request through the NexQL Free AI gateway</td>
+              <td>Enforce the monthly usage cap for your tier — we do <strong>not</strong> log the content of your prompts or AI responses</td>
+            </tr>
+            <tr>
+              <td>Standard request logs (IP, timestamp, endpoint)</td>
+              <td>Every request to our API, via our host (Vercel)</td>
+              <td>Security, abuse prevention, debugging — not used for tracking or advertising</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>3. What we never collect</h2>
+      <ul>
+        <li>Database passwords or connection credentials (local Secret Storage only)</li>
+        <li>Your query results, table contents, or schema data</li>
+        <li>Full payment card numbers — Razorpay handles and stores those under PCI-DSS</li>
+        <li>The text of your AI prompts, generated SQL, or AI responses</li>
+      </ul>
+
+      <h2>4. Third parties we use</h2>
+      <ul>
+        <li><strong><a href="https://razorpay.com/" target="_blank" rel="noopener noreferrer">Razorpay</a></strong> — payment processing for Sponsor/Singularity subscriptions. See their <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</li>
+        <li><strong>Resend</strong> — sends license-key and receipt emails.</li>
+        <li><strong>Neon (Postgres)</strong> — stores license/subscription records, Cloud Sync data, and AI usage counters.</li>
+        <li><strong>Vercel</strong> — hosts the website and serverless API, and generates standard access logs.</li>
+        <li><strong>AI providers</strong> — if you bring your own API key (OpenAI, Anthropic, Gemini, etc.), your prompts go directly to that provider under their own privacy policy. NexQL Free AI routes through our managed AI gateway, which does not retain prompt content beyond what's needed to complete the request.</li>
+        <li><strong>Google Fonts</strong> — the website loads typefaces from Google Fonts' CDN, which sees the request per Google's own policies. No analytics or advertising trackers are used on this site.</li>
+      </ul>
+
+      <h2>5. Data retention</h2>
+      <p>
+        License and billing records are kept for as long as your account is active, and afterward as
+        needed for tax/accounting records. Cloud Sync data for an account that loses paid access is
+        retained for <strong>30 days</strong> and then permanently purged (see the retention job in
+        our backend). Monthly AI usage counters reset every calendar month and aren't kept
+        indefinitely.
+      </p>
+
+      <h2>6. Your choices</h2>
+      <ul>
+        <li>Cloud Sync is entirely opt-in — the extension works fully without it.</li>
+        <li>You can revoke a linked device from your account at any time.</li>
+        <li>You can cancel your subscription anytime; see the <a href="terms.html">Terms of Service</a>.</li>
+        <li>To request deletion or an export of the data we hold about you, email <a href="mailto:support@astrx.dev">support@astrx.dev</a> from the address on your account. We'll respond and act on verified requests.</li>
+      </ul>
+
+      <h2>7. Children's privacy</h2>
+      <p>NexQL is a developer tool and is not directed at, or knowingly used to collect data from, children under 13.</p>
+
+      <h2>8. Changes to this policy</h2>
+      <p>
+        If we change what we collect or how we use it, we'll update the "Last updated" date above and,
+        for material changes, note it in the <a href="https://github.com/dev-asterix/NexQL/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer">changelog</a>.
+      </p>
+
+      <h2>9. Contact</h2>
+      <p>
+        Questions, data requests, or concerns: <a href="mailto:support@astrx.dev">support@astrx.dev</a>.
+      </p>
+    </div>
+
+    <p class="legal-footer-note">
+      See also our <a href="terms.html">Terms of Service</a>. · <a href="/">Back to NexQL</a>
+    </p>
+  </main>
+
+  <script type="module" src="js/theme-loader.mjs"></script>
+</body>
+</html>

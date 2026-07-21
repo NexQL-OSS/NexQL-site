@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Terms of Service — NexQL</title>
+  <meta name="description" content="Terms of Service for NexQL, the PostgreSQL VS Code extension and its optional paid Sponsor/Singularity plans.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nexql.astrx.dev/terms.html">
+  <meta name="theme-color" content="#07080E">
+  <link rel="icon" type="image/png" href="assets/NexQL.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.legal-page {
+      margin: 0;
+      height: auto;
+      min-height: 100vh;
+      overflow: visible;
+      background: var(--bg, #faf9f5);
+      color: var(--fg, #1a1917);
+      font-family: var(--font-body, "Space Grotesk", system-ui, sans-serif);
+    }
+
+    .legal-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--border, #d9d5cc);
+      background: color-mix(in srgb, var(--bg, #faf9f5) 92%, transparent);
+      backdrop-filter: blur(8px);
+    }
+
+    .legal-header-inner {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .legal-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .legal-logo img { width: 32px; height: 32px; }
+
+    .legal-header-nav { display: flex; gap: 1rem; font-size: 0.85rem; }
+    .legal-header-nav a { color: var(--muted, #6b665f); text-decoration: none; }
+    .legal-header-nav a:hover, .legal-header-nav a[aria-current="page"] { color: var(--fg, #1a1917); }
+
+    .legal-main {
+      max-width: 46rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 5rem;
+    }
+
+    .legal-updated {
+      color: var(--muted, #6b665f);
+      font-size: 0.85rem;
+      margin: 0.5rem 0 2rem;
+    }
+
+    .legal-intro {
+      color: var(--muted, #6b665f);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .legal-prose h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin: 2.25rem 0 0.75rem;
+      padding-top: 0.25rem;
+      border-top: 1px solid var(--border, #d9d5cc);
+    }
+
+    .legal-prose h2:first-of-type { border-top: 0; margin-top: 0; }
+
+    .legal-prose p, .legal-prose li {
+      line-height: 1.65;
+      font-size: 0.95rem;
+      color: var(--fg, #1a1917);
+    }
+
+    .legal-prose p { margin: 0 0 0.85rem; }
+    .legal-prose ul { margin: 0 0 0.85rem; padding-left: 1.25rem; }
+    .legal-prose li { margin-bottom: 0.4rem; }
+    .legal-prose a { color: var(--nex-indigo, #6c4cd6); }
+    .legal-prose strong { font-weight: 600; }
+
+    .legal-footer-note {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border, #d9d5cc);
+      font-size: 0.85rem;
+      color: var(--muted, #6b665f);
+    }
+
+    .legal-footer-note a { color: var(--nex-indigo, #6c4cd6); }
+  </style>
+</head>
+<body class="legal-page">
+  <header class="legal-header" role="banner">
+    <div class="legal-header-inner">
+      <a href="/" class="legal-logo" aria-label="NexQL home">
+        <img src="assets/NexQL.png" alt="" width="32" height="32">
+        <span class="brand-gradient" style="font-weight: 600; font-size: 1.1rem;">NexQL</span>
+      </a>
+      <nav class="legal-header-nav" aria-label="Legal pages">
+        <a href="terms.html" aria-current="page">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-main">
+    <span class="eyebrow">Legal</span>
+    <h1 class="grad-text" style="font-size: 1.9rem; margin: 0.5rem 0 0;">Terms of Service</h1>
+    <p class="legal-updated">Last updated: July 19, 2026</p>
+    <p class="legal-intro">
+      NexQL is a free, MIT-licensed PostgreSQL extension for VS Code, with optional paid
+      <strong>Sponsor</strong> and <strong>Singularity</strong> plans. These Terms cover the
+      <a href="https://nexql.astrx.dev/">nexql.astrx.dev</a> website, the paid checkout/licensing
+      backend, and the optional Cloud Sync and hosted AI features. They're written to be short and
+      readable — if anything is unclear, email
+      <a href="mailto:support@astrx.dev">support@astrx.dev</a>.
+    </p>
+
+    <div class="legal-prose">
+      <h2>1. Who runs NexQL</h2>
+      <p>
+        NexQL is developed and operated by <strong>astrx.dev</strong> (GitHub: <a href="https://github.com/dev-asterix" target="_blank" rel="noopener noreferrer">dev-asterix</a>).
+        In these Terms, "we", "us", and "NexQL" refer to astrx.dev acting as the operator of this
+        website and backend services. We're an independent developer project, not a large company —
+        if you ever need a human, email works.
+      </p>
+
+      <h2>2. The extension is free and open source</h2>
+      <p>
+        The core NexQL extension (<a href="https://marketplace.visualstudio.com/items?itemName=ric-v.postgres-explorer" target="_blank" rel="noopener noreferrer">VS Code Marketplace</a> / <a href="https://open-vsx.org/extension/ric-v/postgres-explorer" target="_blank" rel="noopener noreferrer">Open VSX</a>)
+        is MIT-licensed and free forever — notebooks, database explorer, AI assist (including
+        zero-config NexQL Free AI), schema tools, and safety controls. Source is public at
+        <a href="https://github.com/dev-asterix/NexQL" target="_blank" rel="noopener noreferrer">github.com/dev-asterix/NexQL</a>
+        under the MIT license, which governs your right to use, modify, and redistribute the code
+        independently of these Terms.
+      </p>
+
+      <h2>3. Paid plans (Sponsor / Singularity)</h2>
+      <p>
+        Sponsor and Singularity are optional paid subscriptions that unlock extra features (schema
+        diff, unlimited saved queries, cloud sync, higher AI usage limits, priority support). They
+        are billed monthly or annually, in INR or USD, and renew automatically until cancelled.
+        Current pricing is shown on the <a href="https://nexql.astrx.dev/#pricing">pricing page</a>.
+      </p>
+
+      <h2>4. Payments</h2>
+      <p>
+        All payments are processed by <a href="https://razorpay.com/" target="_blank" rel="noopener noreferrer">Razorpay</a>,
+        a licensed payment aggregator that supports Indian and international cards/currencies. We
+        never see or store your full card number — Razorpay handles that per their own
+        <a href="https://razorpay.com/security/" target="_blank" rel="noopener noreferrer">security and compliance</a>
+        standards (PCI-DSS). After a successful payment, we receive a license key that activates
+        your plan in VS Code.
+      </p>
+
+      <h2>5. Cancellations &amp; refunds</h2>
+      <p>
+        You can cancel anytime from the license management screen (or by emailing us your license
+        key). Cancelling stops future renewals; by default your plan stays active until the end of
+        the billing period you already paid for. You may also request an immediate cancellation,
+        which ends access right away.
+      </p>
+      <p>
+        <strong>We do not offer refunds</strong> for partial billing periods, unused time, or
+        change-of-mind cancellations. If you believe you were charged in error (e.g. a duplicate
+        charge or a billing bug), email <a href="mailto:support@astrx.dev">support@astrx.dev</a>
+        with your license key and we'll look into it.
+      </p>
+
+      <h2>6. Acceptable use</h2>
+      <ul>
+        <li>Don't attempt to bypass, share, or resell license keys or the free-tier usage limits.</li>
+        <li>Don't use the hosted AI gateway or Cloud Sync to store or transmit unlawful content.</li>
+        <li>Don't attempt to overwhelm, scan, or attack the API backend.</li>
+      </ul>
+      <p>We may suspend access for accounts that violate these terms or abuse shared infrastructure.</p>
+
+      <h2>7. AI features</h2>
+      <p>
+        NexQL Free AI (zero-config) and the "bring your own key" providers (OpenAI, Anthropic,
+        Gemini, GitHub Models, VS Code Language Model API) generate SQL, explanations, and
+        optimizations from the prompts and schema context you send. When you use your own API key,
+        that provider's own terms and privacy policy govern how they handle your data — NexQL is
+        just the client. See our <a href="privacy.html">Privacy Policy</a> for what NexQL itself
+        stores about AI usage (short version: usage counts for metering, not your prompt content).
+      </p>
+
+      <h2>8. Cloud Sync (paid feature)</h2>
+      <p>
+        Cloud Sync is opt-in and lets Sponsor/Singularity users sync connection profiles, saved
+        queries, and notebooks across devices. Database <strong>passwords are never included</strong> —
+        credentials stay local via VS Code's encrypted Secret Storage. If your paid plan lapses,
+        synced data is retained for 30 days and then purged; see the Privacy Policy for details.
+      </p>
+
+      <h2>9. Database safety — use your own judgment</h2>
+      <p>
+        NexQL includes safety features (environment labels, risk scoring for destructive
+        statements) as a convenience, not a guarantee. <strong>You are responsible for the SQL you
+        run</strong> against your databases, including anything generated or suggested by AI. Always
+        review generated queries before running them against production data.
+      </p>
+
+      <h2>10. No warranty, limitation of liability</h2>
+      <p>
+        NexQL is provided "as is", without warranty of any kind, express or implied. To the maximum
+        extent permitted by law, astrx.dev is not liable for any indirect, incidental, or
+        consequential damages — including data loss — arising from your use of the extension,
+        website, or backend services.
+      </p>
+
+      <h2>11. Changes to these Terms</h2>
+      <p>
+        We may update these Terms as the product changes. Material changes will update the "Last
+        updated" date above; continued use after a change means you accept the update.
+      </p>
+
+      <h2>12. Governing law</h2>
+      <p>
+        These Terms are governed by the laws of India, where our payment processor Razorpay is
+        licensed and regulated. We welcome customers worldwide — Razorpay supports international
+        cards and both INR and USD billing.
+      </p>
+
+      <h2>13. Contact</h2>
+      <p>
+        Questions about these Terms: <a href="mailto:support@astrx.dev">support@astrx.dev</a>.
+        Bug reports and feature requests: <a href="https://github.com/dev-asterix/NexQL/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>.
+      </p>
+    </div>
+
+    <p class="legal-footer-note">
+      See also our <a href="privacy.html">Privacy Policy</a>. · <a href="/">Back to NexQL</a>
+    </p>
+  </main>
+
+  <script type="module" src="js/theme-loader.mjs"></script>
+</body>
+</html>
