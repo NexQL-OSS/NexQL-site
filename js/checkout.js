@@ -441,7 +441,7 @@
     }
 
     const pricing = window.NexQLPricing;
-    const currency = pricing?.getCurrency?.() || 'INR';
+    const currency = pricing?.getCurrency?.() || 'USD';
     const period = pricing?.getPeriod?.() || 'monthly';
     const tierLabel = TIER_LABELS[tier] || tier;
 

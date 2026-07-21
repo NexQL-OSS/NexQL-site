@@ -1,71 +1,16 @@
-// Pricing tier UI: currency auto-detect, billing/currency toggles, dynamic price labels.
+// Pricing tier UI: billing toggle, dynamic price labels. USD only — INR hidden.
 
 (function () {
-  const STORAGE_CURRENCY = 'nexql_pricing_currency';
   const STORAGE_PERIOD = 'nexql_pricing_period';
 
   let catalog = null;
 
-  function isUserInIndia() {
-    if (catalog && typeof catalog.inIndia === 'boolean') {
-      return catalog.inIndia;
-    }
-    try {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      if (tz === 'Asia/Kolkata') return true;
-    } catch (_) {
-      /* ignore */
-    }
-    const lang = (navigator.language || '').toLowerCase();
-    if (lang.startsWith('en-in') || lang.startsWith('hi-in')) return true;
-    return false;
-  }
-
-  function adjustCurrencyUI() {
-    const inIndia = isUserInIndia();
-    const inrBtn = document.querySelector('.pricing-currency-toggle button[data-currency="INR"]');
-    if (inrBtn) {
-      if (!inIndia) {
-        inrBtn.style.display = 'none';
-        if (getCurrency() === 'INR') {
-          setCurrency('USD');
-        }
-      } else {
-        inrBtn.style.display = '';
-      }
-    }
-  }
-
-  function detectDefaultCurrency() {
-    try {
-      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-      if (tz === 'Asia/Kolkata') return 'INR';
-    } catch (_) {
-      /* ignore */
-    }
-    const lang = (navigator.language || '').toLowerCase();
-    if (lang.startsWith('en-in') || lang.startsWith('hi-in')) return 'INR';
-    return 'USD';
-  }
-
   function getCurrency() {
-    if (!isUserInIndia()) {
-      return 'USD';
-    }
-    return sessionStorage.getItem(STORAGE_CURRENCY) || detectDefaultCurrency();
+    return 'USD';
   }
 
   function getPeriod() {
     return sessionStorage.getItem(STORAGE_PERIOD) || 'monthly';
-  }
-
-  function setCurrency(currency) {
-    if (!isUserInIndia() && currency === 'INR') {
-      currency = 'USD';
-    }
-    sessionStorage.setItem(STORAGE_CURRENCY, currency);
-    syncToggleGroup('.pricing-currency-toggle', 'data-currency', currency);
-    updatePriceLabels();
   }
 
   function setPeriod(period) {
@@ -111,9 +56,11 @@
       if (amountEl) amountEl.textContent = parsed.amount;
       if (periodEl) periodEl.textContent = parsed.period;
 
+      // Checkout temporarily disabled while payment setup is being fixed —
+      // force-disabled regardless of catalog availability.
       if (payBtn) {
-        payBtn.disabled = !tierData.available;
-        payBtn.title = tierData.available ? '' : 'Checkout unavailable — plan not configured yet';
+        payBtn.disabled = true;
+        payBtn.title = 'Checkout temporarily unavailable';
       }
     });
   }
@@ -123,24 +70,13 @@
       const res = await fetch('/api/config');
       if (!res.ok) throw new Error('Failed to load pricing config');
       catalog = await res.json();
-      adjustCurrencyUI();
       updatePriceLabels();
     } catch (err) {
       console.error('Pricing catalog load failed:', err);
-      adjustCurrencyUI();
     }
-  }
-
-  function wireToggles() {
-    /* Event delegation — partials inject pricing controls after initial load */
   }
 
   document.addEventListener('click', (event) => {
-    const currencyBtn = event.target.closest('.pricing-currency-toggle button[data-currency]');
-    if (currencyBtn) {
-      setCurrency(currencyBtn.getAttribute('data-currency'));
-      return;
-    }
     const periodBtn = event.target.closest('.pricing-billing-toggle button[data-period]');
     if (periodBtn) {
       setPeriod(periodBtn.getAttribute('data-period'));
@@ -148,8 +84,6 @@
   });
 
   function initPricingUi() {
-    adjustCurrencyUI();
-    syncToggleGroup('.pricing-currency-toggle', 'data-currency', getCurrency());
     syncToggleGroup('.pricing-billing-toggle', 'data-period', getPeriod());
     updatePriceLabels();
   }
