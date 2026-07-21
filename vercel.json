@@ -1,6 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
+  "buildCommand": null,
+  "installCommand": "npm ci --prefix api",
+  "outputDirectory": "website",
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
@@ -8,5 +11,9 @@
       "source": "/api/:path*",
       "destination": "https://api.nexql.astrx.dev/api/:path*"
     }
+  ],
+  "crons": [
+    { "path": "/api/cron/license-expiry", "schedule": "0 3 * * *" },
+    { "path": "/api/cron/sync-purge-inactive", "schedule": "0 4 * * *" }
   ]
 }

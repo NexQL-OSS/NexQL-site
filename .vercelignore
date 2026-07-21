@@ -1,0 +1,6 @@
+docs/
+scripts/
+api/eslint.config.js
+.git/
+*.log
+node_modules/
